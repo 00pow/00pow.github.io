@@ -39,7 +39,7 @@
 <hr>
 <div align="center">
 
-<a href="https://blog.naver.com/moongsilirang">
+<a href="https://00pow.github.io/">
     <img src="https://img.shields.io/badge/Velog-1EBC8F?style=for-the-badge&logo=velog&logoColor=white" />&nbsp
   </a>
   <a href="mailto:kimseo131612@gmail.com">
