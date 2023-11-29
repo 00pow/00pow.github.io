@@ -1,7 +1,7 @@
 
 
 
-<h3>📚 기술스택</h3>
+<h3>:books: 기술스택</h3>
 <hr>
 <div>
 <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
@@ -12,4 +12,12 @@
 <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 <img src="https://img.shields.io/badge/apache tomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=white">
+</div>
+
+<h3>:zap: 깃허브 분석 </h3>
+<hr>
+<div>
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=00pow&layout=compact)](https://github.com/00pow/github-readme-stats)
+
+
 </div>
