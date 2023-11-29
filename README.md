@@ -17,7 +17,7 @@
 <h3>:zap: 깃허브 분석 </h3>
 <hr>
 <div>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=00pow&layout=compact)">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=00pow&layout=compact">
 
 
 </div>
