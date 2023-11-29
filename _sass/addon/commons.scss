@@ -689,11 +689,12 @@ $btn-mb: 0.5rem;
   overflow-y: auto;
   width: $sidebar-width;
   z-index: 99;
-  /* background: var(--sidebar-bg); */
-  background: url('/assets/img/boke.jpg');
+  background: var(--sidebar-bg); 
+  background-color: #E3CCCA;
+  /* background: url('/assets/img/boke.jpg');
   background-size: 100% 100%;
   background-position: center;
-  
+  */
   
   
   border-right: 1px solid var(--sidebar-border-color);
@@ -744,6 +745,8 @@ $btn-mb: 0.5rem;
   }
 
   .site-title {
+	
+  
     font-family: inherit;
     font-weight: 900;
     font-size: 1.75rem;
@@ -751,18 +754,22 @@ $btn-mb: 0.5rem;
     letter-spacing: 0.25px;
     margin-top: 1.25rem;
     margin-bottom: 0.5rem;
+	
 
     a {
       @extend %clickable-transition;
       @extend %sidebar-link-hover;
 
-      color: var(--site-title-color);
+      color: #6E6266;
     }
   }
 
   .site-subtitle {
     font-size: 95%;
-    color: var(--site-subtitle-color);
+    /*
+	color: var(--site-subtitle-color);
+	*/
+	color : #8C807C;
     margin-top: 0.25rem;
     word-spacing: 1px;
     -webkit-user-select: none;
