@@ -20,5 +20,6 @@
 <div>
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=00pow&layout=compact">
 
+<img src="https://github-readme-stats.vercel.app/api?username=00pow&hide=stars&show_icons=true">
 
 </div>
