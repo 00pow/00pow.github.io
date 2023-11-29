@@ -46,6 +46,8 @@
     <img
       src="https://img.shields.io/badge/kimseo131612@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>&nbsp
   </a>
+  <hr>
+  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2F00pow%2F00pow.github.io&count_bg=%23E3B9B3&title_bg=%23903535&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false">
 </div>
 
-<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2F00pow%2F00pow.github.io&count_bg=%23E3B9B3&title_bg=%23903535&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false">
+
