@@ -34,6 +34,9 @@
 <h3> :email: Contact </h3>
 <hr>
 <div>
-<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2F00pow%2F00pow.github.io&count_bg=%23E3B9B3&title_bg=%23903535&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false">
+
 <img src="https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:kimseo131612@gmail.com">
+[![Gmail Badge](https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:kimseo131612@gmail.com)](mailto:kimseo131612@gmail.com)
 </div>
+
+<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2F00pow%2F00pow.github.io&count_bg=%23E3B9B3&title_bg=%23903535&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false">
