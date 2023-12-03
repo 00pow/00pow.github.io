@@ -46,7 +46,7 @@ Github Actions는 `x86_64-linux` 우분투용 플랫폼을 사용합니다. <br>
 `Add a description`에 사진을 붙여 넣어주세요<br>
 그러면 `![image](./img/이미지이름.png)` 형태의 <br>
 주소가 복사되어 사진을 올릴 수 있습니다. <br>
-사진을 저장하지 않고 캡쳐 화면으로도 주소를 얻을 수 있어 좋은 방법인 것 같습니다.<br>
+사진을 저장하지 않고도 캡쳐 화면으로도 주소를 얻을 수 있어 좋은 방법인 것 같습니다.<br>
 
 - 참고 사이트 : [링크](https://velog.io/@uzchu/Github-%EB%B8%94%EB%A1%9C%EA%B7%B8-image-%EC%82%BD%EC%9E%85%ED%95%98%EA%B8%B0){:target="_blank"}
 
