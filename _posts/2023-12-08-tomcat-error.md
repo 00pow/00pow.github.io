@@ -13,7 +13,6 @@ published: true
 ## Tomcat 에러 Several ports required by Tomcat v9.0 Server at localhost are already in use.
 
 안녕하세요. 저는 **00pow**입니다.<br>
-오늘은 스프링프레임워크 사용 시 발생하는 알람 창에서<br>
 Tomcat 에러 Several ports (8003, 8088) required by Tomcat v9.0 Server at localhost are already in use.<br>
 라는 문구가 떴을 때의 해결방안을 포스팅해보겠습니다. <br>
 
