@@ -1,6 +1,6 @@
 ---
 layout: post
-title: &quot;Tomcat Error&quot;
+title: "Tomcat Error"
 excerpt: "톰캣 에러"
 author: 00pow
 date: 2023-12-08 14:10:00 +0900
