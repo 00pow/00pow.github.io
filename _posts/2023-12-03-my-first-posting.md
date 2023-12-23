@@ -21,7 +21,7 @@ window8 환경에서 작업하였고 jekyll theme로는 chirpy를 이용하였�
 
 ruby로 로컬서버 미리보기 했을 때는 사이트가 잘 뜨는데,<br>
 깃허브 주소로 연결되었을 때는 아래와 같은 사진이 떴습니다.<br>
-![error](https://github.com/00pow/HappyHasigae/assets/143794137/198bfcc4-d831-40fd-a305-16eeb836e165)
+![error](https://github.com/00pow/ddobagi/assets/143794137/198bfcc4-d831-40fd-a305-16eeb836e165)
 
 이 에러에 대한 해결방안은 저의 경우 이렇게 해결하였습니다.<br>
 
