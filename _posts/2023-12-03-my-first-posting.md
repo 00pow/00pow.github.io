@@ -60,7 +60,7 @@ ruby prompt 실행 시 `bundle exec jekyll serve` 했을 때<br>
 `npm install && npm run build`<br>
 
 node.js 모듈을 설치하지 않으면 assets/js/dist/*.min.js NotFound 에러 발생과 함께<br>
-블로그 기능이 정상적으로 동작하지 않으므로 node.js설치가 중요합다는 걸 알았습니다. <br>
+블로그 기능이 정상적으로 동작하지 않으므로 node.js설치가 중요하다는 걸 알았습니다. <br>
 
 - 참고 사이트 : [링크](https://jjikin.com/posts/Jekyll-Chirpy-%ED%85%8C%EB%A7%88%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-Github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0(2023-6%EC%9B%94-%EA%B8%B0%EC%A4%80)/#%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95-%EA%B0%84-%EC%9D%B4%EC%8A%88-%ED%95%B4%EA%B2%B0){:target="_blank"}
 
