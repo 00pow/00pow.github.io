@@ -20,7 +20,7 @@ published: true
 `spring-security-web`<br>
 `spring-security-config`<br>
 `spring-security-core`<br>
-`spring-security-taglibs` <br>
+`spring-security-taglibs`<br>
 
 
 ### 스프링 시큐리티 필터 설정
