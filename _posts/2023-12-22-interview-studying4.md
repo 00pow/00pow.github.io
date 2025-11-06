@@ -8,6 +8,7 @@ categories: [Blogging, Tutorial]
 tags: [writing]
 render_with_liquid: false
 published: true
+comments: true
 ---
 
 ## 백엔드 기술 면접 질문 대비 정리(4)

@@ -8,6 +8,7 @@ categories: [Blogging, Tutorial]
 tags: [writing]
 render_with_liquid: false
 published: true
+comments: true
 ---
 
 ## 깃허브 블로그 생성 과정에서 발생했던 크고 작은 오류들에 대해 포스팅 해보겠습니다

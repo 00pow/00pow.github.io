@@ -8,6 +8,7 @@ categories: [Blogging, Tutorial]
 tags: [writing]
 render_with_liquid: false
 published: true
+comments: true
 ---
 
 ## Tomcat 에러 Several ports required by Tomcat v9.0 Server at localhost are already in use.

@@ -8,6 +8,7 @@ categories: [Blogging, Tutorial]
 tags: [writing]
 render_with_liquid: false
 published: true
+comments: true
 ---
 
 ## 카카오 로그인 설정 필수사항에 대해 간단히 포스팅 해보겠습니다
