@@ -8,6 +8,7 @@ categories: [Blogging, Tutorial]
 tags: [writing]
 render_with_liquid: false
 published: true
+comments: true
 ---
 
 ## Spring Security
