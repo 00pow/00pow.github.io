@@ -6,7 +6,7 @@ author: 00pow
 date: 2023-12-22 10:10:00 +0900
 categories: [Blogging, Tutorial]
 tags: [writing]
-render_with_liquid: false
+render_with_liquid: true
 published: true
 comments: true
 ---
