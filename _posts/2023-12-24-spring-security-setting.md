@@ -26,7 +26,7 @@ comments: true
 
 ### 스프링 시큐리티 필터 설정
 
-web.xml 파일에 스프링 시큐리티 설정을 해준다. <br>
+web.xml 파일에 스프링 시큐리티 설정을 해준다요. <br>
 security-context.xml 파일에도 인증 매니저와 같은 최소한의 코드를 입력한다.<br>
 Security Controller 자바 클래스를 만들어주고, 메서드 3개 만들어서 각각의 메서드 맵핑해준다.<br>
 톰캣 서버 모듈에 path를 / 로 바꿔준다. <br>
