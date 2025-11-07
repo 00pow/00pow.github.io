@@ -1,4 +1,13 @@
-<!--  The comments switcher -->
-  {% capture path %}comments/{{ site.comments.active }}.html{% endcapture %}
-  {% include {{ path }} %}
+{% if site.comments and site.comments.provider == "utterances" %}
+  <section id="comments" class="comments">
+    <script src="https://utteranc.es/client.js"
+            repo="{{ site.comments.repo }}"
+            issue-term="{{ site.comments.issue_term | default: 'pathname' }}"
+            theme="{{ site.comments.theme | default: 'github-light' }}"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </section>
+{% endif %}
+
 
