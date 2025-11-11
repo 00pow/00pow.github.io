@@ -23,13 +23,8 @@ end
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 gem "webrick", "~> 1.8"
-<<<<<<< HEAD
 gem "jekyll-include-cache"
 gem "jekyll-paginate"
 gem "jekyll-seo-tag"
 gem "nokogiri", ">= 1.18.10"
-
-# gem "jekyll-theme-chirpy", "~> 7.1"
->>>>>>> 11497b4 (fix: restore utterances comments and theme integration)
-
-
+gem "jekyll-theme-chirpy", "~> 7.1"
