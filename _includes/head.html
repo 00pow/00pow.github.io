@@ -1,5 +1,4 @@
 <!-- The Head -->
-
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
@@ -17,19 +16,18 @@
 
   {% if page.image %}
     {% assign img = page.image.path | default: page.image %}
-
     {% unless img contains '://' %}
       {% assign img_path = page.img_path | append: '/' | append: img | replace: '//', '/' %}
       {% capture target %}"{{ img | absolute_url }}"{% endcapture %}
 
       {% if site.img_cdn contains '//' %}
-        <!-- it's a cross-origin URL -->
+        <!-- Cross-origin URL -->
         {% capture replacement %}"{{ site.img_cdn }}{{ img_path }}"{% endcapture %}
       {% else %}
-        <!-- it's a local file path -->
-        {%- capture replacement -%}
+        <!-- Local file path -->
+        {% capture replacement %}
           "{{ site.img_cdn | append: '/' | append: img_path | replace: '//', '/' | absolute_url }}"
-        {%- endcapture -%}
+        {% endcapture %}
       {% endif %}
 
       {% assign seo_tags = seo_tags | replace: target, replacement %}
@@ -47,34 +45,32 @@
 
   {% include_cached favicons.html %}
 
+  <!-- Webfonts & CDN preconnect -->
   {% if site.resources.ignore_env != jekyll.environment and site.resources.self_hosted %}
     <link href="{{ site.data.origin[type].webfonts | relative_url }}" rel="stylesheet">
-
   {% else %}
     {% for cdn in site.data.origin[type].cdns %}
       <link rel="preconnect" href="{{ cdn.url }}" {{ cdn.args }}>
       <link rel="dns-prefetch" href="{{ cdn.url }}" {{ cdn.args }}>
     {% endfor %}
+<<<<<<< HEAD
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+=======
+>>>>>>> 11497b4 (fix: restore utterances comments and theme integration)
   {% endif %}
 
-  <!-- GA -->
+  <!-- GA (Google Analytics) -->
   {% if jekyll.environment == 'production' and site.google_analytics.id != empty and site.google_analytics.id %}
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials">
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
-
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   {% endif %}
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="{{ site.data.origin[type].bootstrap.css | relative_url}}">
-
-  <!-- Font Awesome -->
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="{{ site.data.origin[type].bootstrap.css | relative_url }}">
   <link rel="stylesheet" href="{{ site.data.origin[type].fontawesome.css | relative_url }}">
-
-  <link rel="stylesheet" href="{{ '/assets/css/:THEME.css' | replace: ':THEME', site.theme | relative_url }}">
 
   {% if site.toc and page.toc %}
     <link rel="stylesheet" href="{{ site.data.origin[type].toc.css | relative_url }}">
@@ -85,12 +81,13 @@
   {% endif %}
 
   {% if page.layout == 'page' or page.layout == 'post' %}
-    <!-- Manific Popup -->
     <link rel="stylesheet" href="{{ site.data.origin[type].magnific-popup.css | relative_url }}">
   {% endif %}
 
-  <!-- JavaScript -->
+  <!-- ✅ Custom site style must be loaded last -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
+  <!-- Mode toggle JS (dark/light) -->
   {% unless site.theme_mode %}
     {% include mode-toggle.html %}
   {% endunless %}

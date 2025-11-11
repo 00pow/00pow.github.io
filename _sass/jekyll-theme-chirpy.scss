@@ -1,0 +1,19 @@
+// The main Sass file for the Chirpy theme.
+
+@import
+  "variables-hook",
+  "addon/variables",
+  "addon/commons",
+  "addon/syntax",
+  "layout/home",
+  "layout/post",
+  "layout/page",
+  "layout/categories",
+  "layout/tags",
+  "layout/archives",
+  "layout/tabs",
+  "layout/footer",
+  "layout/sidebar",
+  "layout/topbar",
+  "layout/pagination",
+  "layout/404";

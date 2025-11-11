@@ -65,8 +65,13 @@
     {% assign js = 'commons' %}
 {% endcase %}
 
-{% capture script %}/assets/js/dist/{{ js }}.min.js{% endcapture %}
-<script defer src="{{ script | relative_url }}"></script>
+{% if site.assets.self_host.enabled %}
+  {% capture script %}/assets/js/dist/{{ js }}.min.js{% endcapture %}
+  <script defer src="{{ script | relative_url }}"></script>
+{% else %}
+  <script defer src="https://cdn.jsdelivr.net/gh/cotes2020/jekyll-theme-chirpy@6.3.1/assets/js/dist/{{ js }}.min.js"></script>
+{% endif %}
+
 
 {% if page.math %}
   <!-- MathJax -->

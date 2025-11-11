@@ -2,6 +2,13 @@
   The common styles
 */
 
+@import "addon/variables-hook";
+@import "addon/variables";
+@import "addon/syntax";
+@import "addon/light-scheme";
+@import "addon/dark-scheme";
+
+
 html {
   @media (prefers-color-scheme: light) {
     &:not([data-mode]),
