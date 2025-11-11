@@ -27,8 +27,6 @@ gem "webrick", "~> 1.8"
 gem "jekyll-include-cache"
 gem "jekyll-paginate"
 gem "jekyll-seo-tag"
-=======
-
 gem "nokogiri", ">= 1.18.10"
 
 # gem "jekyll-theme-chirpy", "~> 7.1"
