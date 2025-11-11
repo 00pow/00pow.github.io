@@ -53,12 +53,11 @@
       <link rel="preconnect" href="{{ cdn.url }}" {{ cdn.args }}>
       <link rel="dns-prefetch" href="{{ cdn.url }}" {{ cdn.args }}>
     {% endfor %}
-<<<<<<< HEAD
+ {% endif %}
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-=======
->>>>>>> 11497b4 (fix: restore utterances comments and theme integration)
-  {% endif %}
+
+ 
 
   <!-- GA (Google Analytics) -->
   {% if jekyll.environment == 'production' and site.google_analytics.id != empty and site.google_analytics.id %}

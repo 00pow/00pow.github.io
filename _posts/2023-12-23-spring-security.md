@@ -9,10 +9,6 @@ tags: [writing]
 render_with_liquid: true
 published: true
 comments: true
-<<<<<<< HEAD
-=======
-
->>>>>>> 11497b4 (fix: restore utterances comments and theme integration)
 ---
 
 ## Spring Security

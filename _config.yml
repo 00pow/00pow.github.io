@@ -87,11 +87,8 @@ comments:
   # utterances settings › https://utteranc.es/
   utterances:
     repo: 00pow/00pow.github.io # <gh-username>/<repo>
-<<<<<<< HEAD
-    issue_term: title # < url | pathname | title | ...>
-=======
+
     issue_term: pathname # < url | pathname | title | ...>
->>>>>>> 11497b4 (fix: restore utterances comments and theme integration)
   # Giscus options › https://giscus.app
   giscus:
     repo: # <gh-username>/<repo>
@@ -196,15 +193,11 @@ jekyll-archives:
     tag: /tags/:name/
     category: /categories/:name/
 future: true
-<<<<<<< HEAD
 plugins:
   - jekyll-include-cache
   - jekyll-paginate
   - jekyll-seo-tag
-sass:
-  style: compressed
 
-=======
 
 sass:
   sass_dir: _sass
@@ -215,4 +208,4 @@ include:
 
 
 
->>>>>>> 11497b4 (fix: restore utterances comments and theme integration)
+
