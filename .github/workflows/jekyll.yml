@@ -31,11 +31,13 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.2
-          bundler-cache: true  # ✅ 캐시 활성화 (gem install bundler 필요 없음)
+          ruby-version: 3.2  # or 3.1, Gemfile.lock 기준으로 맞추기
+          bundler-cache: true
 
       - name: Build site with Jekyll
         run: bundle exec jekyll build -d ./_site
+        env:
+          JEKYLL_ENV: production
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
