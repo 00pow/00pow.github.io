@@ -1,3 +1,14 @@
-{% if site.comments and site.comments.provider == "utterances" %}
-  {% include comments/utterances.html %}
+{% comment %}
+  comments.html — loads the correct provider template
+{% endcomment %}
+
+{% if site.comments.provider %}
+  {% case site.comments.provider %}
+    {% when "utterances" %}
+      {% include comments/utterances.html %}
+    {% when "giscus" %}
+      {% include comments/giscus.html %}
+    {% when "disqus" %}
+      {% include comments/disqus.html %}
+  {% endcase %}
 {% endif %}
