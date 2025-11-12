@@ -88,6 +88,7 @@ comments:
   utterances:
     repo: "00pow/00pow.github.io" # <gh-username>/<repo>
     issue_term: "pathname" # < url | pathname | title | ...>
+    label: "💬 comment"
     theme: "preferred-color-scheme"
   # Giscus options › https://giscus.app
   giscus:
