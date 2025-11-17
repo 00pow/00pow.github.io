@@ -110,6 +110,20 @@ body {
   transition: all 0.25s ease-in-out;
   cursor: pointer;
 }
+/* Sidebar hover background change */
+#sidebar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  transition: background-color 0.25s ease;
+}
+
+
+/* 선택된 항목(active)과 구분되도록 테두리 유지 */
+/* Hover 시 테두리 보이게 */
+#sidebar .nav-link:hover {
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+
 
 /* 아이콘 간격 */
 #sidebar .nav-link i {
