@@ -7,34 +7,33 @@ description: >-
   기록하고 공유하는 개발 블로그
 url: "https://00pow.github.io"
 baseurl: ""
-
 theme: jekyll-theme-chirpy
+avatar: /assets/img/avatar.jpg
 lang: ko
 timezone: Asia/Seoul
 
 # =====================================
-#  Author & Social Links
+#  Author Profile
 # =====================================
 author:
-  name: 00pow
-  url: https://github.com/00pow
-  avatar: /assets/img/avatar.png
-
-social:
-  name: GitHub
+  name: 00pow 
+  bio: "00pow-dev"
+  location: "Busan, South Korea"
   links:
-    - https://github.com/00pow
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/00pow"
 
 # =====================================
-#  Comments (Utterances)
+#  Comments (Giscus)
 # =====================================
 comments:
   provider: giscus
   giscus:
     repo: 00pow/00pow.github.io
-    repo_id: ""          # giscus.app에서 복사
-    category: "General"  # giscus.app에서 복사
-    category_id: ""      # giscus.app에서 복사
+    repo_id: "R_kgDOKzE7BA"
+    category: "General"
+    category_id: "DIC_kwDOKzE7BM4CxtS7"
     mapping: pathname
     strict: 0
     reactions_enabled: 1
@@ -42,6 +41,14 @@ comments:
     input_position: bottom
     theme: preferred_color_scheme
     lang: ko
+
+# =====================================
+#  Social
+# =====================================
+social:
+  name: GitHub
+  links:
+    - https://github.com/00pow
 
 # =====================================
 #  Plugins
@@ -53,9 +60,25 @@ plugins:
 
 paginate: 10
 paginate_path: /page:num/
-
 markdown: kramdown
 highlighter: rouge
+
+# =====================================
+#  Tabs Navigation (for Chirpy 7.x)
+# =====================================
+tabs:
+  - title: Categories
+    url: /categories/
+    icon: fas fa-stream
+  - title: Tags
+    url: /tags/
+    icon: fas fa-tags
+  - title: Archives
+    url: /archives/
+    icon: fas fa-archive
+  - title: About
+    url: /about/
+    icon: fas fa-user
 
 # =====================================
 #  Build Settings
@@ -67,3 +90,5 @@ exclude:
   - vendor
   - tmp
 
+include:
+  - _tabs

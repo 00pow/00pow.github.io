@@ -1,0 +1,44 @@
+---
+title: Categories
+icon: far fa-stream
+order: 1
+permalink: /categories/
+layout: page
+---
+
+<p class="page-desc">
+  작성한 글들을 주제별로 정리한 카테고리 목록입니다.
+</p>
+
+<ul class="only-parent-list">
+
+  <!-- 최상위 Blogging 하나만 출력 -->
+  <li class="category-parent">
+  <div class="cat-header" onclick="this.parentElement.classList.toggle('open')">
+    <i class="folder-icon far fa-folder"></i>
+    <span class="cat-title">Blogging</span>
+    <span class="cat-count">{{ site.categories.Blogging | size }} posts</span>
+    <i class="fas fa-chevron-down arrow"></i>
+  </div>
+
+    <!-- 하위 카테고리 출력 -->
+    <ul class="category-children">
+
+      {% assign subs = site.categories | sort %}
+      {% for item in subs %}
+        {% assign cat = item[0] %}
+        {% assign posts = item[1] %}
+
+        {% if posts[0].categories contains "Blogging" and cat != "Blogging" %}
+        <li class="category-child">
+          <i class="far fa-folder"></i>
+          <a href="/categories/{{ cat | slugify }}/">{{ cat }}</a>
+          <span class="child-count">{{ posts | size }} posts</span>
+        </li>
+        {% endif %}
+      {% endfor %}
+
+    </ul>
+  </li>
+
+</ul>

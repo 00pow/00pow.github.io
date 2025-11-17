@@ -4,7 +4,9 @@ title: "Spring security setting"
 excerpt: "스프링 시큐리티"
 author: 00pow
 date: 2023-12-24 10:10:00 +0900
-categories: [Blogging, Tutorial]
+categories:
+  - Blogging
+  - Study
 tags: [writing]
 render_with_liquid: true
 published: true

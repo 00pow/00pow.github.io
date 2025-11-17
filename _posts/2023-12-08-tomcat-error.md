@@ -4,7 +4,9 @@ title: "Tomcat Error"
 excerpt: "톰캣 에러"
 author: 00pow
 date: 2023-12-08 14:10:00 +0900
-categories: [Blogging, Tutorial]
+categories:
+  - Blogging
+  - Error
 tags: [writing]
 render_with_liquid: true
 published: true

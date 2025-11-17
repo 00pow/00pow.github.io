@@ -4,7 +4,9 @@ title: "Interview Q&A"
 excerpt: "면접 대비 질문 정리"
 author: 00pow
 date: 2023-12-14 14:10:00 +0900
-categories: [Blogging, Tutorial]
+categories:
+  - Blogging
+  - Interview
 tags: [writing]
 render_with_liquid: true
 published: true

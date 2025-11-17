@@ -4,7 +4,9 @@ title: "Error in creating GitHub blog"
 excerpt: "깃허브 연동 블로그 생성 중 발생했던 오류"
 author: 00pow
 date: 2023-12-03 14:10:00 +0900
-categories: [Blogging, Tutorial]
+categories:
+  - Blogging
+  - Tutorial
 tags: [writing]
 render_with_liquid: true
 published: true

@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 # ✅ Chirpy theme (7.1 이상, 8.0 미만)
-gem "jekyll-theme-chirpy", ">= 7.1", "< 8.0"
+# gem "jekyll-theme-chirpy", ">= 7.1", "< 8.0"
 
 # Gem specification
 gemspec

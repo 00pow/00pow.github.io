@@ -4,7 +4,9 @@ title: "Kakao Developers"
 excerpt: "카카오 간편 로그인"
 author: 00pow
 date: 2023-12-06 14:10:00 +0900
-categories: [Blogging, Tutorial]
+categories:
+  - Blogging
+  - Tutorial
 tags: [writing]
 render_with_liquid: true
 published: true

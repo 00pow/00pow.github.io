@@ -1,24 +1,135 @@
 ---
 layout: page
-# The Category layout
 ---
 
-{% include lang.html %}
-
-<div id="page-category">
-  <h1 class="ps-lg-2">
-    <i class="far fa-folder-open fa-fw text-muted"></i>
-    {{ page.title }}
-    <span class="lead text-muted ps-2">{{ page.posts | size }}</span>
+<div class="category-header-block">
+  <h1>
+    <i class="far fa-folder"></i>
+    {{ page.category }}
+    <span class="cat-count">{{ site.categories[page.category] | size }}</span>
   </h1>
-
-  <ul class="content ps-0">
-    {% for post in page.posts %}
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span class="dash flex-grow-1"></span>
-        {% include datetime.html date=post.date class='text-muted small text-nowrap' lang=lang %}
-      </li>
-    {% endfor %}
-  </ul>
 </div>
+
+<ul class="category-post-list">
+  {% assign posts = site.categories[page.category] %}
+  {% for post in posts %}
+  <li class="post-row">
+    <a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+    <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+  </li>
+  {% endfor %}
+</ul>
+
+<style>
+/* ===== 카테고리 제목 ===== */
+.category-header-block h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.category-header-block .cat-count {
+  font-size: 1.1rem;
+  color: #777;
+  margin-left: 0.4rem;
+}
+
+/* ===== 글 목록 스타일 ===== */
+.category-post-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.post-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.55rem 0;
+  border-bottom: 1px dotted #ddd;
+}
+
+.post-title {
+  font-size: 1rem;
+  color: #2b5fff;
+}
+
+.post-title:hover {
+  text-decoration: underline;
+}
+
+.post-date {
+  color: #777;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+.post-list-by-category {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.5rem;
+}
+
+.post-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted #ddd;
+}
+
+/* 글 제목 갈색 스타일 */
+.post-item a {
+  font-size: 1rem;
+  color: #b36b00; /* 갈색 */
+  font-weight: 600;
+}
+
+.post-item a:hover {
+  text-decoration: underline;
+  color: #8a5300; /* hover 시 약간 진하게 */
+}
+
+.post-date {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.category-page-wrapper .post-list-by-category .post-item a {
+  font-size: 1rem;
+  color: #b36b00 !important;  /* 갈색 */
+  font-weight: 600;
+}
+
+.category-page-wrapper .post-list-by-category .post-item a:hover {
+  text-decoration: underline;
+  color: #8a5300 !important;
+}
+
+.post-date {
+  color: #777;
+  font-size: 0.9rem;
+}
+.post-list-by-category .post-item a {
+  color: #b36b00 !important;
+  font-weight: 600;
+}
+
+.post-list-by-category .post-item a:hover {
+  color: #8a5300 !important;
+}
+
+.post-date {
+  color: #777;
+}
+/* 글 제목 갈색 */
+.post-title {
+  color: #b36b00 !important;
+  font-weight: 600;
+}
+
+.post-title:hover {
+  color: #8a5300 !important;
+  text-decoration: underline;
+}
+
+</style>

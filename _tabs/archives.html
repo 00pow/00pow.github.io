@@ -1,0 +1,55 @@
+---
+layout: page
+title: Archives
+icon: fas fa-archive
+order: 3
+permalink: /archives/
+---
+
+<!-- ================================
+      🔷 HEADER SECTION (소개 영역)
+================================ -->
+<div class="page-header-block">
+  <h1><i class="fas fa-archive"></i> Archives</h1>
+
+  <p class="desc">
+    시간 순서대로 모든 글을 모아둔 기록 아카이브입니다.<br>
+    내가 학습해온 흐름과 작업 히스토리를 한눈에 파악할 수 있어요.
+  </p>
+
+  <div class="archive-intro-box">
+    <div><i class="fas fa-calendar-alt"></i> 연도별 정리</div>
+    <div><i class="fas fa-history"></i> 프로젝트 타임라인</div>
+    <div><i class="fas fa-chart-line"></i> 성장 기록</div>
+  </div>
+</div>
+
+<!-- ================================
+      🔷 TIMELINE SECTION (옛날 예쁜 스타일)
+================================ -->
+<div class="archives timeline">
+  {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+
+  {% for year in postsByYear %}
+  <div class="year-block">
+    <h2 class="year-title">{{ year.name }}</h2>
+
+    <ul class="timeline-list">
+      {% for post in year.items %}
+      <li class="timeline-item">
+        <div class="timeline-date">
+          <span class="day">{{ post.date | date: "%d" }}</span>
+          <span class="month">{{ post.date | date: "%b" }}</span>
+        </div>
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>

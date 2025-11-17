@@ -1,35 +1,27 @@
 ---
 layout: page
-# The Archives of posts.
+title: Archives
 ---
 
-{% include lang.html %}
+<div id="archives-wrapper">
+  {% include lang.html %}
+  {% include toc.html %}
 
-{% assign df_strftime_m = site.data.locales[lang].df.archives.strftime | default: '/ %m' %}
-{% assign df_dayjs_m = site.data.locales[lang].df.archives.dayjs | default: '/ MM' %}
+  <!-- 자동 아카이브 출력 -->
+  <div class="archives-list">
+    {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 
-<div id="archives" class="pl-xl-3">
-  {% for post in site.posts %}
-    {% assign cur_year = post.date | date: '%Y' %}
+    {% for year in posts_by_year %}
+      <h2 class="year-heading">{{ year.name }}</h2>
 
-    {% if cur_year != last_year %}
-      {% unless forloop.first %}</ul>{% endunless %}
-
-      <time class="year lead d-block">{{ cur_year }}</time>
-      {{ '<ul class="list-unstyled">' }}
-
-      {% assign last_year = cur_year %}
-    {% endif %}
-
-    <li>
-      {% assign ts = post.date | date: '%s' %}
-      <span class="date day" data-ts="{{ ts }}" data-df="DD">{{ post.date | date: '%d' }}</span>
-      <span class="date month small text-muted ms-1" data-ts="{{ ts }}" data-df="{{ df_dayjs_m }}">
-        {{ post.date | date: df_strftime_m }}
-      </span>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </li>
-
-    {% if forloop.last %}</ul>{% endif %}
-  {% endfor %}
+      <ul class="archive-year-list">
+        {% for post in year.items %}
+          <li>
+            <span class="date">{{ post.date | date: '%m/%d' }}</span>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </div>
 </div>
