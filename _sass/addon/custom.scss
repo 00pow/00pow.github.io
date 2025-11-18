@@ -124,7 +124,6 @@ body {
 }
 
 
-
 /* 아이콘 간격 */
 #sidebar .nav-link i {
   margin-right: 0.35rem;
@@ -132,8 +131,8 @@ body {
 
 /* 하단부 아이콘 크기 */
 #sidebar .sidebar-bottom i {
-  font-size: 0.9rem;
 }
+  font-size: 0.9rem;
 
 /* 🌤️ 라이트 모드 hover / active / home */
 #sidebar .nav-link:hover {
@@ -741,3 +740,37 @@ blockquote {
   font-size: 0.85rem;
   color: #777;
 }
+
+/* ========= Responsive Fix for Sidebar + Main ========= */
+
+/* Main content responsive width */
+#main {
+  width: 100%;
+  max-width: min(880px, 92vw);
+  margin: 0 auto;
+}
+
+/* Sidebar responsive */
+#sidebar {
+  width: clamp(240px, 28vw, 280px);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  #sidebar {
+    width: 100%;
+  }
+  #main {
+    max-width: 95%;
+    padding: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  #main {
+    max-width: 100%;
+    padding: 0.8rem;
+  }
+}
+
