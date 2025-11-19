@@ -755,11 +755,17 @@ blockquote {
   #sidebar-wrapper {
     width: 100% !important;
     max-width: 100% !important;
+	
+	/* 👇 요게 핵심!!! 사이드바가 화면 전체를 덮는 문제 해결 */
+    height: auto !important;
   }
 
   #sidebar {
     width: 100% !important;
     max-width: 100% !important;
+	
+	/* 👇 이것도 꼭 있어야 사이드바 높이가 늘어나지 않음 */
+    height: auto !important;
   }
 
   /* 본문 또한 100% 너비로 변경 */
