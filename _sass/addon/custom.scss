@@ -227,31 +227,6 @@ blockquote {
   color: #999;
 }
 
-/* ---- 반응형 (태블릿 이하) ---- */
-@media (max-width: 992px) {
-  #sidebar {
-    width: 100%;
-  }
-  #main {
-    padding: 1rem;
-    max-width: 95%;
-  }
-}
-
-/* ---- 반응형 (모바일) ---- */
-@media (max-width: 576px) {
-  .post-preview {
-    padding: 0.9rem 1rem;
-  }
-
-  .post-title {
-    font-size: 1.1rem;
-  }
-
-  .post-content {
-    font-size: 0.9rem;
-  }
-}
 /* ------------------------------
    ABOUT PAGE CUSTOM STYLE
 --------------------------------*/
