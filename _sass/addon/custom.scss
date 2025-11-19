@@ -781,4 +781,46 @@ blockquote {
   }
 }
 
+/* =========================================================
+   FIX: Sidebar too wide and overlapping on medium screens
+   ========================================================= */
+
+/* 1) 기본 사이드바 축소 (모든 화면 공통) */
+#sidebar {
+  width: clamp(200px, 22vw, 240px); /* 더 좁게 조절 */
+}
+
+/* 2) 중간 화면에서 강제로 세로 레이아웃 적용 */
+@media (max-width: 1200px) and (min-width: 768px) {
+
+  /* 전체 레이아웃을 세로로 */
+  .container {
+    flex-direction: column !important;
+  }
+
+  /* 사이드바 · 본문 모두 full-width */
+  #sidebar {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #main {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.2rem !important;
+  }
+}
+
+/* 3) 모바일 최적화 */
+@media (max-width: 576px) {
+  #sidebar {
+    width: 100% !important;
+  }
+  #main {
+    width: 100% !important;
+    padding: 1rem !important;
+  }
+}
+
+
 
