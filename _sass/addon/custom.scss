@@ -741,36 +741,37 @@ blockquote {
   color: #777;
 }
 
-/* ========= Responsive Fix for Sidebar + Main ========= */
+/* ==== Fix for mid-size screen layout collapsing ==== */
+@media (max-width: 1200px) and (min-width: 992px) {
 
-/* Main content responsive width */
-#main {
-  width: 100%;
-  max-width: min(880px, 92vw);
-  margin: 0 auto;
-}
+  /* 전체 레이아웃을 세로 배치로 변경 */
+  #layout {
+    display: flex !important;
+    flex-direction: column !important;
+  }
 
-/* Sidebar responsive */
-#sidebar {
-  width: clamp(240px, 28vw, 280px);
-}
+  /* 사이드바를 위로 배치 */
+  #sidebar-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 
-/* Tablet */
-@media (max-width: 992px) {
   #sidebar {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
   }
+
+  /* 본문 또한 100% 너비로 변경 */
+  #main-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
   #main {
-    max-width: 95%;
-    padding: 1rem;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1rem !important;
   }
 }
 
-/* Mobile */
-@media (max-width: 576px) {
-  #main {
-    max-width: 100%;
-    padding: 0.8rem;
-  }
-}
 
