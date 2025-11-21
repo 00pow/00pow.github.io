@@ -110,18 +110,7 @@ body {
   transition: all 0.25s ease-in-out;
   cursor: pointer;
 }
-/* Sidebar hover background change */
-#sidebar .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.85) !important;
-  transition: background-color 0.25s ease;
-}
 
-
-/* 선택된 항목(active)과 구분되도록 테두리 유지 */
-/* Hover 시 테두리 보이게 */
-#sidebar .nav-link:hover {
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
-}
 
 
 /* 아이콘 간격 */
@@ -135,37 +124,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* 🌤️ 라이트 모드 hover / active / home */
-#sidebar .nav-link:hover {
-  background-color: #f4f4f4; /* 연회색 배경 */
-  transform: scale(1.05);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
-}
 
-#sidebar .nav-item.active .nav-link {
-  background-color: #f4f4f4;
-  font-weight: 600;
-  transform: scale(1.05);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-/* 홈 탭 (기본 강조) */
-#sidebar .nav-item:first-child .nav-link {
-  background-color: #f4f4f4;
-  font-weight: 600;
-  transform: scale(1.05);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-/* 🌙 다크 모드일 때 동일 효과 (회색톤 자동 전환) */
-[data-mode="dark"] #sidebar .nav-link:hover,
-[data-mode="dark"] #sidebar .nav-item.active .nav-link,
-[data-mode="dark"] #sidebar .nav-item:first-child .nav-link {
-  background-color: #3a3a3a;
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  transform: scale(1.05);
-}
 
 /* ---- 클릭 시 Ripple 효과 ---- */
 #sidebar .nav-link::after {
@@ -717,7 +676,91 @@ blockquote {
   color: #777;
 }
 
+/* Hover 상태 (Glass + Scale) */
+#sidebar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.85) !important;
+  transform: scale(1.05);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+}
+
+/* =======================
+   FINAL HOVER & ACTIVE
+   (Glass + Scale 유지)
+   ======================= */
+
+#sidebar .nav-link {
+  transition: all 0.25s ease;
+}
 
 
 
+/* Active 상태 */
+#sidebar .nav-item.active .nav-link {
+  background: rgba(255, 255, 255, 0.9) !important;
+  transform: scale(1.05);
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* 다크모드 보정 */
+[data-mode="dark"] #sidebar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #fff;
+}
+
+[data-mode="dark"] #sidebar .nav-item.active .nav-link {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #fff;
+}
+
+/* ===========================================
+   NAVIGATION BUTTON GLASS BLUR EFFECT (NEW)
+   =========================================== */
+
+/* 기본 nav 버튼에 blur 적용 */
+#sidebar .nav-link {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.05); /* 기본 약한 glass */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.25s ease;
+}
+
+/* Hover 시 더 선명한 Glass + Scale */
+#sidebar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* Active 상태도 더 강조된 glass */
+#sidebar .nav-item.active .nav-link {
+  background: rgba(255, 255, 255, 0.55) !important;
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  transform: scale(1.05);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* ---- Dark mode glass 보정 ---- */
+[data-mode="dark"] #sidebar .nav-link {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-mode="dark"] #sidebar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(16px);
+}
+
+[data-mode="dark"] #sidebar .nav-item.active .nav-link {
+  background: rgba(255, 255, 255, 0.22) !important;
+  backdrop-filter: blur(22px);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
 
