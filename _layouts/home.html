@@ -1,6 +1,10 @@
 ---
 layout: default
 refactor: true
+panel_includes:
+  - panel-outfit
+  - panel-music
+  - panel-news
 ---
 
 {% include lang.html %}
@@ -39,42 +43,9 @@ refactor: true
     {% assign posts = posts | push: default[i] %}
   {% endfor %}
 {% endif %}
-<!-- Outfit banner start -->
-<div class="home-banner" style="
-  background: linear-gradient(135deg, #ffe7e7, #ffe0f0);
-  padding: 1.3rem 1.5rem;
-  border-radius: 14px;
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-">
 
-  <div style="font-size: 2.2rem;">👗</div>
 
-  <div style="flex-grow:1;">
-    <div style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem;">
-      오늘 뭐 입지? — 자동 옷차림 추천
-    </div>
-    <div style="font-size: 0.9rem; color: #555;">
-      현재 위치의 날씨를 기반으로 옷차림을 추천해드립니다.
-    </div>
-  </div>
 
-  <a href="/tools/outfit/" style="
-    background: #ff7da9;
-    color: white;
-    padding: 0.6rem 1rem;
-    border-radius: 10px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-decoration: none;
-    white-space: nowrap;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  ">바로가기</a>
-</div>
-<!-- Outfit banner end -->
 
 <div id="post-list" class="flex-grow-1 px-xl-1">
   {% for post in site.posts %}
@@ -146,6 +117,47 @@ refactor: true
       </a>
     </article>
   {% endfor %}
+  
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", async function () {
+
+    // 네이버 IT/과학 RSS
+    const RSS_URL = "https://news.naver.com/rss/section/105.xml";
+
+    async function loadRSSFeed(url) {
+      try {
+        const response = await fetch("https://api.allorigins.win/get?url=" + encodeURIComponent(url));
+        const data = await response.json();
+
+        const xml = new window.DOMParser().parseFromString(data.contents, "text/xml");
+        const items = xml.querySelectorAll("item");
+        return Array.from(items).slice(0, 3); // ●●● TOP 3 뉴스만
+      } catch (e) {
+        console.error("RSS 읽기 실패:", e);
+        return [];
+      }
+    }
+
+    const newsList = document.getElementById("hot-news-list");
+    const items = await loadRSSFeed(RSS_URL);
+
+    items.forEach(item => {
+      const title = item.querySelector("title").textContent;
+      const link = item.querySelector("link").textContent;
+
+      const li = document.createElement("li");
+      li.style.marginBottom = "6px";
+
+      li.innerHTML = `<a href="${link}" target="_blank" style="color:#d35400; font-weight:600; text-decoration:none;">
+                        ${title}
+                      </a>`;
+      newsList.appendChild(li);
+    });
+
+  });
+</script>
+
 </div>
 <!-- #post-list -->
 

@@ -1,0 +1,43 @@
+<div class="panel-box" style="
+  background: #fff6dd;
+  padding: 1rem 1.2rem;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+">
+  <div style="display:flex; align-items:center; gap:0.6rem;">
+    <div style="font-size:1.6rem;">📰</div>
+    <div style="font-size:1rem; font-weight:700;">지금 가장 핫한 IT/과학 뉴스</div>
+  </div>
+
+  <ul id="news-list" style="margin-top:0.6rem; padding-left:1rem; font-size:0.85rem; color:#444;"></ul>
+</div>
+
+<script>
+async function loadHotNews() {
+  const proxy = "https://api.allorigins.win/get?url=";
+  const rss = encodeURIComponent("https://rss.etnews.com/etnews.xml");
+
+  try {
+    const res = await fetch(proxy + rss);
+    const data = JSON.parse((await res.json()).contents);
+
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(data, "text/xml");
+    const items = xml.querySelectorAll("item");
+
+    const list = document.getElementById("news-list");
+    list.innerHTML = "";
+
+    [...items].slice(0, 3).forEach(item => {
+      const title = item.querySelector("title").textContent;
+      const link = item.querySelector("link").textContent;
+      list.innerHTML += `<li style="margin-bottom:6px;"><a href="${link}" target="_blank">${title}</a></li>`;
+    });
+  } catch (e) {
+    console.error("뉴스 로딩 실패", e);
+  }
+}
+
+loadHotNews();
+</script>
