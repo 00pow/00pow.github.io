@@ -72,6 +72,9 @@
   <script defer src="https://cdn.jsdelivr.net/gh/cotes2020/jekyll-theme-chirpy@6.3.1/assets/js/dist/{{ js }}.min.js"></script>
 {% endif %}
 
+<!-- custom.js를 항상 로드 -->
+<script src="{{ '/assets/js/custom.js' | relative_url }}"></script>
+
 
 {% if page.math %}
   <!-- MathJax -->
@@ -107,5 +110,7 @@
   <!-- GA -->
   {% if site.google_analytics.id != empty and site.google_analytics.id %}
     {% include google-analytics.html %}
+
   {% endif %}
 {% endif %}
+

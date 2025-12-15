@@ -118,45 +118,6 @@ panel_includes:
     </article>
   {% endfor %}
   
-  
-  <script>
-  document.addEventListener("DOMContentLoaded", async function () {
-
-    // 네이버 IT/과학 RSS
-    const RSS_URL = "https://news.naver.com/rss/section/105.xml";
-
-    async function loadRSSFeed(url) {
-      try {
-        const response = await fetch("https://api.allorigins.win/get?url=" + encodeURIComponent(url));
-        const data = await response.json();
-
-        const xml = new window.DOMParser().parseFromString(data.contents, "text/xml");
-        const items = xml.querySelectorAll("item");
-        return Array.from(items).slice(0, 3); // ●●● TOP 3 뉴스만
-      } catch (e) {
-        console.error("RSS 읽기 실패:", e);
-        return [];
-      }
-    }
-
-    const newsList = document.getElementById("hot-news-list");
-    const items = await loadRSSFeed(RSS_URL);
-
-    items.forEach(item => {
-      const title = item.querySelector("title").textContent;
-      const link = item.querySelector("link").textContent;
-
-      const li = document.createElement("li");
-      li.style.marginBottom = "6px";
-
-      li.innerHTML = `<a href="${link}" target="_blank" style="color:#d35400; font-weight:600; text-decoration:none;">
-                        ${title}
-                      </a>`;
-      newsList.appendChild(li);
-    });
-
-  });
-</script>
 
 </div>
 <!-- #post-list -->

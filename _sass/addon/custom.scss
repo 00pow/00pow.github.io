@@ -764,3 +764,97 @@ blockquote {
   color: #fff;
 }
 
+/* 오른쪽 패널 전체 스타일 통일 */
+
+/* 오른쪽 패널 전체 공통 스타일 + 간격 */
+.widget-box,
+.panel-box,
+.panel.panel-default {
+  background: #f6eaea !important;   /* 부드러운 로즈 톤 */
+  border-radius: 14px !important;
+  padding: 1rem 1.2rem !important;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05) !important;
+  border: 1px solid #e2cbcb !important;
+  margin-bottom: 1rem !important; /* ← 여백 추가 포함 */
+}
+
+
+/* 위젯 제목 컬러 */
+.widget-box strong,
+.panel-heading {
+  color: #7a5d5d !important;
+}
+
+/* 버튼 hover */
+button:hover,
+.btn:hover {
+  background: #c56978 !important;
+}
+
+/* 랜덤 음악 추천의 텍스트 */
+#music-title {
+  color: #5a4c4c !important;
+}
+
+/* 뉴스 리스트 */
+#news-list a {
+  color: #6a5858 !important;
+}
+
+#news-list a:hover {
+  color: #c56978 !important;
+}
+/* 오늘 뭐 입지? → 바로가기 버튼 (로즈골드) */
+.outfit-go-btn {
+  background: #d7a7a1 !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 6px 14px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+.outfit-go-btn:hover {
+  background: #c98c84 !important;
+}
+
+/* 랜덤 음악 추천 → 재생 버튼 (톤다운 로즈핑크) */
+#playMusicBtn {
+  background: #c98094 !important;   /* 딱 사진 속 톤다운 로즈 */
+  color: white !important;
+  border-radius: 8px !important;
+  padding: 6px 14px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12) !important;
+}
+
+#playMusicBtn:hover {
+  background: #b26f82 !important;   /* hover용 진한 로즈핑크 */
+}
+
+/* 오른쪽 위젯 제목 한 줄 처리 */
+.widget-box strong {
+  white-space: nowrap !important;
+  font-size: 0.95rem !important;
+}
+
+/* 패널들 간 간격 확보 */
+.widget-box,
+.panel-box,
+.panel.panel-default {
+  margin-bottom: 1rem !important;
+}
+
+
+/* 우측 뉴스 위젯 제목 한 줄 처리 + 글자 크기 축소 */
+h4.fw-bold.mb-2 {
+    font-size: 0.95rem !important;      /* 제목 크기 줄이기 */
+    white-space: nowrap !important;     /* 줄바꿈 금지 */
+    overflow: hidden !important;        /* 넘치면 숨김 */
+    text-overflow: ellipsis !important; /* … 처리 */
+    line-height: 1.3 !important;
+}
+
+
+

@@ -1,48 +1,25 @@
-<div class="panel-box" style="
-  background: #eef3ff;
+<div class="widget-box" style="
+  background: #e8f0ff;
   padding: 1rem 1.2rem;
   border-radius: 14px;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 ">
-  <div style="font-size: 1.6rem;">🎵</div>
+  <strong style="font-size:1.1rem; display:flex; align-items:center; gap:8px;">
+    🎵 랜덤 음악 추천
+  </strong>
 
-  <div style="flex-grow:1;">
-    <div style="font-size: 1rem; font-weight: 700;">
-      랜덤 음악 추천
-    </div>
-    <div style="font-size: 0.85rem; color: #555;">
-      지금 기분에 맞는 음악 추천
-    </div>
-  </div>
+  <p id="music-title" style="margin: 10px 0 6px; font-size: 0.95rem; font-weight:600; color:#333;"></p>
 
-  <button onclick="randomMusic()" style="
-    background: #5a78ff;
-    color: white;
-    padding: 0.45rem 0.8rem;
-    font-size: 0.8rem;
+  <button id="playMusicBtn" style="
+    background:#4d6cff;
+    color:white;
+    padding: 6px 14px;
+    border:none;
     border-radius: 8px;
-    text-decoration: none;
-    border: none;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    white-space: nowrap;
-  ">재생</button>
+    cursor:pointer;
+    font-size:0.85rem;
+    font-weight:600;
+    margin-top:4px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  ">재생 ▶</button>
 </div>
-
-<script>
-function randomMusic() {
-  const list = [
-    "https://www.youtube.com/watch?v=5qap5aO4i9A",
-    "https://www.youtube.com/watch?v=DWcJFNfaw9c",
-    "https://www.youtube.com/watch?v=2Vv-BfVoq4g",
-    "https://www.youtube.com/watch?v=KTZ-y85Erus",
-    "https://www.youtube.com/watch?v=fLexgOxsZu0"
-  ];
-
-  const url = list[Math.floor(Math.random() * list.length)];
-  window.open(url, "_blank");
-}
-</script>
